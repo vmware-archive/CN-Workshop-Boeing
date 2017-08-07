@@ -33,7 +33,7 @@ CN-Workshop-Boeing:
 +
 *_STS Import Help:_*
 +
-Select File > Import… Then select Maven > Existing Maven Projects. On the Import Maven Projects page, browse to the /cloud-native-spring directory (e.g. CN-Workshop-Boeing/labs/lab01/cloud-native-spring)
+Select File > Import… Then select Maven > Existing Maven Projects. On the Import Maven Projects page, browse to the /cloud-native-spring directory (e.g. CN-Workshop-Boeing/labs/my_work/cloud-native-spring)
 
 == Add an Endpoint
 
