@@ -473,9 +473,10 @@ applications:
 ---------------------------------------------------------------------
 . Push application into Cloud Foundry
 +
+$ mvn clean package
 $ cf push -f manifest.yml
 
-. Find the URL created for your app in the health status report. Browse to your app.  Also view your application details in the Apps Mananger UI:
+. Find the URL created for your app in the health status report. Browse to your app.  Also view your application details in the Apps Manager UI:
 +
 image::images/appsman.jpg[]
 
