@@ -6,6 +6,8 @@ This one day hands-on classroom style session will provide developers with hands
 == Software Prerequisites
 
  * Access to the Internet
+ * Git 2.14.0
  * Maven 3.5.0
  * Java JDK 1.8u144
+ * CF CLI 6.29.0+ff886fa93.2017-07-24
  * Your favorite editor or IDE (e.g., IntelliJ IDEA or Spring Source Tool Suite)
