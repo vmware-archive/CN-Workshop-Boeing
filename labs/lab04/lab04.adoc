@@ -151,7 +151,7 @@ $ mvn clean spring-boot:run
 
 == Create Spring Cloud Config Server instance
 
-. Now that our application is ready to read its config from a cloud config server, we need to deploy one!  This can be done through cloudfoundry using the services marketplace.  Browse to the marketplace in Pivotal Cloud Foundry Apps Manager, navigate to the space you have been using to push your app, and select Config Server:
+. Now that our application is ready to read its config from a cloud config server, we need to deploy one!  This can be done through Cloud Foundry using the services marketplace.  Browse to the marketplace in Pivotal Cloud Foundry Apps Manager, navigate to the space you have been using to push your app, and select Config Server:
 +
 image::images/config-scs.jpg[]
 
@@ -159,11 +159,11 @@ image::images/config-scs.jpg[]
 +
 image::images/config-scs1.jpg[]
 
-. After we create the service instance you'll be redirected to your _Space_ landing page that lists your apps and services.  The config server is deployed on-demand and will take a few moments to deploy.  Once the messsage _The Service Instance is Initializing_ disappears click on the service you provisioned.  Select the manage link towards the top of the resulting screen to view the instance id and a JSON document with a single element, count, which validates that the instance provisioned correctly:
+. After we create the service instance you'll be redirected to your _Space_ landing page that lists your apps and services.  The config server is deployed on-demand and will take a few moments to deploy.  Once the message _The Service Instance is Initializing_ disappears click on the service you provisioned.  Select the manage link towards the top of the resulting screen to view the instance id and a JSON document with a single element, count, which validates that the instance provisioned correctly:
 +
 image::images/config-scs2.jpg[]
 
-. We now need to update the service instance with our GIT repository information.  Using the cloudfoundry CLI execute the following update service command:
+. We now need to update the service instance with our GIT repository information.  Using the Cloud Foundry CLI execute the following update service command:
 +
 [source,bash]
 ---------------------------------------------------------------------
@@ -219,7 +219,7 @@ $ cf push -f manifest.yml
 
 . Test your application by navigating to the root URL of the application, which will invoke the hello() service.  You should now see a greeting that is read from the cloud config server!
 +
-Bon Jour World!
+Guten Tag World!
 
 . What just happened??  A Spring component within the Spring Cloud Starter Config Client module called a _service connector_ automatically detected that there was a Cloud Config service bound into the application.  The service connector configured the application automatically to connect to the cloud config server and download the configuration and wire it into the application
 
