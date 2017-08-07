@@ -34,7 +34,7 @@ public class CloudNativeSpringUiApplication {
 		@Override
 		public Resources<City> getCities() {
 			//We'll just return an empty response
-			return new Resources(Collections.EMPTY_LIST);
+			return new Resources<City>(Collections.emptyList());
 		}
 	}
 ---------------------------------------------------------------------
@@ -79,7 +79,7 @@ public class CloudNativeSpringUiApplication {
 
 	@FeignClient(name = "cloud-native-spring", fallback = CityClientFallback.class)
 	public interface CityClient {
-		@RequestMapping(method= RequestMethod.GET, value="/cities", consumes="application/hal+json")
+		@GetMapping(value="/cities", consumes="application/hal+json")
 		Resources<City> getCities();
 	}
 
@@ -88,7 +88,7 @@ public class CloudNativeSpringUiApplication {
 		@Override
 		public Resources<City> getCities() {
 			//We'll just return an empty response
-			return new Resources(Collections.EMPTY_LIST);
+			return new Resources<City>(Collections.emptyList());
 		}
 	}
 }
@@ -108,7 +108,7 @@ $ cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboa
 +
 image::images/dash.jpg[]
 
-. We will now bind our application to our circuit-breaker-dashboard within our Cloudfoundry deployment manifest.  Add these additional reference to a the service to the bottom of */cloud-native-spring-ui/manifest.yml* in the services list:
+. We will now bind our application to our circuit-breaker-dashboard within our Cloud Foundry deployment manifest.  Add these additional reference to a the service to the bottom of */cloud-native-spring-ui/manifest.yml* in the services list:
 +
 [source, yml]
 ---------------------------------------------------------------------
