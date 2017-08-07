@@ -1,0 +1,11 @@
+= Pivotal Cloud Native Applications Workshop
+== Overview
+[.lead]
+This one day hands-on classroom style session will provide developers with hands on experience building cloud native applications using micro service architectures, Spring Boot, and Spring Cloud. The session includes presentations, demos and hands on labs.
+
+== Software Prerequisites
+
+ * Access to the Internet
+ * Maven 3.5.0
+ * Java JDK 1.8u144
+ * Your favorite editor or IDE (e.g., IntelliJ IDEA or Spring Source Tool Suite)

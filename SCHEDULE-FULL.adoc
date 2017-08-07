@@ -1,0 +1,31 @@
+== Schedule
+
+8:00 AM - 9:00 AM::
+ * Registration and Breakfast
+9:00 AM - 9:30 AM::
+ * Welcome and Agenda
+ * Intro: link:presentations/Intro_CF_at_Boeing.pptx[_Pivotal Cloud Foundry at Boeing_] 
+9:30 AM - 10:30 AM::
+ * Session 1: link:presentations/Session_1_CN_Design_DDD.pptx[_Cloud Native Design, Domain Driven Design, & Microservices_]
+10:30 AM - 10:45 AM:: Break
+10:45 AM - 12:00 PM::
+ * Session 2: link:presentations/Session_2_Intro_Boot.pptx[_Introducing Spring Boot_]
+ * Lab 1: link:labs/lab01/lab01.adoc[Building A Spring Boot Application]
+ * Session 3: link:presentations/Session_3_Polyglot_Persist.pptx[_Polyglot Persistence with Spring Data REST_]
+ * Lab 2: link:labs/lab02/lab02.adoc[Build a Hypermedia-Driven RESTful Web Service with Spring Data REST]
+12:00 PM - 12:45 PM:: Lunch
+12:45 PM - 1:30 PM::
+ * Session 4: link:presentations/Session_4_Advanced_Boot.pptx[_Advancing Spring Boot with Actuator and Profiles_]
+ * Lab 3: link:labs/lab03/lab03.adoc[Enhancing Boot Application with Metrics]
+1:30 PM - 2:45 PM::
+  * Session 5: link:presentations/Session_5_Intro_SC.pptx[_Introducing Spring Cloud Netflix_]
+  * Session 6: link:presentations/Session_6_SC_Config.pptx[_Spring Cloud Config_]
+  * Lab 4: link:labs/lab04/lab04.adoc[Introducing Spring Cloud into Boot Application]
+2:45 PM - 3:00 PM:: Break
+3:00 PM - 3:45 PM::
+  * Session 7: link:presentations/Session_7_SC_Discovery_LB.pptx[_Spring Cloud Netflix - Service Discovery & Load Balancing_]
+  * Lab 5: link:labs/lab05/lab05.adoc[Microservice Service Discover and Load Balancing]
+3:45 PM - 4:30 PM::
+  * Session 8: link:presentations/Session_8_Circuit_Breaker.pptx[_Spring Cloud Netflix - Circuit Breakers_]
+  * Lab 6: link:labs/lab06/lab06.adoc[Microservice Fault Tolerance with Circuit Breakers]
+4:30 PM:: Wrap-Up and Closing
