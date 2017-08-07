@@ -212,6 +212,31 @@ We'll also be using the Domain object from our main Boot application.  Add that 
 </dependency>
 ---------------------------------------------------------------------
 
++
+Finally, for consistency's sake, we'll produce an exec classified artifact as we did for cloud-native-spring. Your build section should now include:
++
+[source, xml]
+---------------------------------------------------------------------
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>build-info</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <classifier>exec</classifier>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+---------------------------------------------------------------------
+
 . Since this UI is going to consume REST services its an awesome opportunity to use Feign.  Feign will handle *ALL* the work of invoking our services and marshalling/unmarshalling JSON into domain objects.  We'll add a Feign Client interface into our app.  Take note of how Feign references the downstream service; its only the name of the service it will lookup from Eureka service registry.  Add the following interface declaration to the _CloudNativeSpringUIApplication_:
 +
 [source,java,numbered]
@@ -219,7 +244,7 @@ We'll also be using the Domain object from our main Boot application.  Add that 
   @FeignClient("https://cloud-native-spring")
 	public interface CityClient {
 
-		@RequestMapping(method=RequestMethod.GET, value="/cities", consumes="application/hal+json")
+		@GetMapping(value="/cities", consumes="application/hal+json")
 		Resources<City> getCities();
 	}
 ---------------------------------------------------------------------
@@ -338,10 +363,10 @@ $ touch manifest.yml
 ---
 applications:
 - name: cloud-native-spring-ui
-  host: cloud-native-spring-ui
+  host: cloud-native-spring-ui-${random-word}
   memory: 1G
   instances: 1
-  path: ./target/cloud-native-spring-ui-0.0.1-SNAPSHOT.jar
+  path: ./target/cloud-native-spring-ui-0.0.1-SNAPSHOT-exec.jar
   buildpack: java_buildpack
   timeout: 180
   env:
