@@ -1,5 +1,6 @@
 package io.pivotal;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
@@ -18,8 +19,11 @@ public class CloudNativeSpringApplication {
 		SpringApplication.run(CloudNativeSpringApplication.class, args);
 	}
 	
-	@RequestMapping("/")
+	@Value("${greeting:Hola}")
+    private String _greeting;
+
+    @RequestMapping("/")
     public String hello() {
-        return "Hello World!";
+        return _greeting + " World!";
     }
 }

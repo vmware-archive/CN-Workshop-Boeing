@@ -1,3 +1,7 @@
+spring:
+  application:
+    name: cloud-native-spring
+
 endpoints: # add this section
   sensitive: false
   
@@ -17,3 +21,7 @@ management:
   cloudfoundry:
     enabled: true
     skip-ssl-validation: true
+
+security:
+  basic:
+    enabled:  false
